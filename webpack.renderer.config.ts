@@ -13,6 +13,19 @@ rules.push(
             { loader: 'sass-loader' }
         ]
     },
+    {
+        test: /\.(png|svg|jpe?g|gif|webm)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[hash]-[name].[ext]',
+                    outputPath: 'static',
+                    publicPath: '../static',
+                },
+            },
+        ],
+    }
 );
 
 export const rendererConfig: Configuration = {

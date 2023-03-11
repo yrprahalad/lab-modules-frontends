@@ -1,0 +1,72 @@
+.inputHolder {
+	position: relative;
+	border: none;
+	border-radius: 5px;
+	border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+	background-color: white;
+	display: flex;
+	align-items: center;
+	height: 35px;
+	transition: border-color 0.3s;
+	justify-content: space-between;
+	padding: 0 1px 0px 5px;
+
+	&.active {
+		border-color: rgba(var(--primary-color-rgb), 0.5);
+		border-width: 3px;
+	}
+
+	&.disableInput {
+		cursor: not-allowed;
+
+		input,
+		textarea {
+			pointer-events: none;
+		}
+	}
+
+	& > input {
+		display: block;
+		width: 0px;
+		flex-grow: 1;
+		padding: 0 10px;
+		border: none;
+		box-shadow: none;
+		font-size: 12px;
+		letter-spacing: 0.5px;
+		font-weight: 500;
+		color: var(--primary-color);
+		background-color: white;
+		border-radius: 30px;
+		align-self: stretch;
+		filter: grayscale(70%);
+		height: 100%;
+		margin: 0;
+
+		&[type="number"] {
+			margin-right: 5px;
+		}
+
+		&[readonly] {
+			cursor: pointer;
+		}
+
+		&[disabled] {
+			cursor: not-allowed;
+		}
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+	}
+
+	img {
+		width: 16px;
+		height: 16px;
+	}
+
+	.passwordImg {
+		margin-right: 10px;
+	}
+}
