@@ -3,6 +3,8 @@ import InputText from "../../widgets/InputText/InputText";
 import styles from './Auth.module.scss';
 import UserIcon from '../../common/assets/custom-icons/user.svg'
 import LockIcon from '../../common/assets/custom-icons/lock.svg'
+import RoleIcon from '../../common/assets/custom-icons/role.svg'
+import MailIcon from '../../common/assets/custom-icons/mail.svg'
 import Button from "../../widgets/Button/Button";
 
 
@@ -102,7 +104,7 @@ const Auth: React.FC = () => {
                 <div className={styles.inputSegments}>
                     <span>Email</span>
                     <InputText
-                        icon={UserIcon}
+                        icon={MailIcon}
                         value={registerSearchInput.email}
                         type='text'
                         name='email'
@@ -127,7 +129,7 @@ const Auth: React.FC = () => {
                 <div className={styles.inputSegments}>
                     <span>Role</span>
                     <InputText
-                        icon={UserIcon}
+                        icon={RoleIcon}
                         value={registerSearchInput.role}
                         type='text'
                         name='role'
